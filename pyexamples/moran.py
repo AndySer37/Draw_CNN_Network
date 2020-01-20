@@ -8,7 +8,7 @@ arch = [
     to_head( '..' ),
     to_cor(),
     to_begin(),
-    to_input('../img/TS_img.jpg' ,  name="input"),
+    to_input('../img/hunts.png' ,  name="input", width=9, height=6),
     #block-001
     to_Pool(name="pool_b1", offset="(0,0,0)", to="(0,0,0)", width=1, height=20, depth=40, opacity=0.5),
     to_Conv( name='ccr_b1', s_filer="16 * 50", n_filer=64, offset="(0,0,0)", to="(pool_b1-east)", width=2, height=20, depth=40 ,caption="conv1"),
@@ -74,7 +74,7 @@ arch = [
     to_connection( "senet_4", "pool_b8"),
     to_connection( "ccr_b7_2", "pool_b8"), 
 
-    to_input('../img/TS_mask.jpg' ,to="(30.5,0,0)", name="output"),
+    to_input('../img/word.png' ,to="(30.2,0,0)", name="output", width=6, height=4),
 
     to_end()
     ]
